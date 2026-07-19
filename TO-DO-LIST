@@ -6,18 +6,18 @@ def show_menu():
     print("\n===== TO-DO LIST MENU =====")
     print("a. Add Task")
     print("b. View Tasks")
-    print("c. Mark Task as Completed")
+    print("c. Mark Task as done")
     print("d. Delete Task")
-    print("e. Exit")
+    print("e. Terminate")
 
 def add_task():
     task = input("Enter task: ")
     tasks.append({"task": task, "completed": False})
-    print("Task added successfully")
+    print("New task added")
 
 def view_tasks():
     if not tasks:
-        print("No tasks available")
+        print("No tasks found")
         return
 
     print("\nYour Tasks:")
@@ -47,7 +47,7 @@ def delete_task():
 
 while True:
     show_menu()
-    choice = input("Choose an option (a-e): ")b   
+    choice = input("Choose an option (a-e): ") 
 
     if choice == "a":
         add_task()
@@ -61,4 +61,4 @@ while True:
         print("Exiting To-Do List Application")
         break
     else:
-        print("Invalid choice please try again")    
+        print("Invalid option please try again")    
