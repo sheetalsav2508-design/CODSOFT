@@ -1,0 +1,38 @@
+# SIMPLE CALCULATOR
+
+# Display operation menu
+print("\nChoose an operation:")
+print("a. Addition (+)")
+print("b. Subtraction (-)")
+print("c. Multiplication (*)")
+print("d. Division (/)")
+
+# Enter your choice
+choice = input("Enter your choice (a/b/c/d): ")
+
+# Enter two  numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# for  calculating  output
+if choice == 'a':
+    result = num1 + num2
+    print("Result =", result)
+
+elif choice == 'b':
+    result = num1 - num2
+    print("Result =", result)
+
+elif choice == 'c':
+    result = num1 * num2
+    print("Result =", result)
+
+elif choice == 'd':
+    if num2 != 0:
+        result = num1 / num2
+        print("Result =", result)
+    else:
+        print("Error: Division by zero is not allowed")
+
+else:
+    print("Invalid choice! Please select a, b, c, or d.")
